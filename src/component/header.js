@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 function Header(){
 return(
     <div>
@@ -39,9 +40,9 @@ return(
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light w-100">
        
-          <a className="navbar-brand logo_h" href="index.html">
+        <Link to="/" className='nav-link' replace>
             <img src="img/logo.png" alt="" />
-          </a>
+            </Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="icon-bar"></span>
@@ -54,23 +55,23 @@ return(
               <div className="col-lg-7 pr-0">
                 <ul className="nav navbar-nav center_nav pull-right">
                   <li className="nav-item active">
-                    <a className="nav-link" href="index.html">Home</a>
+                    <Link to="/" className='nav-link' replace>Home</Link>
                   </li>
                   <li className="nav-item submenu dropdown">
                     <a href="/" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                       aria-expanded="false">Shop</a>
                     <ul className="dropdown-menu">
                       <li className="nav-item">
-                        <a className="nav-link" href="category.html">Shop Category</a>
+                      <Link to="/category" className="nav-link" replace >Shop Category</Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="single-product.html">Product Details</a>
+                        <Link to="/productdetail" className='nav-link' replace>Product Details</Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="checkout.html">Product Checkout</a>
+                        <Link to="/checkout" className='nav-link' replace>Product Checkout</Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="cart.html">Shopping Cart</a>
+                         <Link to="/cart" className='nav-link' replace>Shopping Cart</Link>
                       </li>
                     </ul>
                   </li>
@@ -79,27 +80,18 @@ return(
                       aria-expanded="false">Blog</a>
                     <ul className="dropdown-menu">
                       <li className="nav-item">
-                        <a className="nav-link" href="blog.html">Blog</a>
+                        <Link to="/bloglist" className='nav-link' replace>Blog</Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="single-blog.html">Blog Details</a>
+                        <Link to="/postdetail" className='nav-link' replace>Blog Details</Link>
                       </li>
                     </ul>
                   </li>
                   <li className="nav-item submenu dropdown">
-                    <a href="/" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                      aria-expanded="false">Pages</a>
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <a className="nav-link" href="tracking.html">Tracking</a>
+                       <Link to="/about" className="nav-link" replace >About Us</Link>
                       </li>
-                      <li className="nav-item">
-                        <a className="nav-link" href="elements.html">Elements</a>
-                      </li>
-                    </ul>
-                  </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="contact.html">Contact</a>
+                     <Link to="/contact" className="nav-link" replace >Contact Us</Link>
                   </li>
                 </ul>
               </div>
