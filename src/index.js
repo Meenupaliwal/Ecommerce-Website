@@ -21,9 +21,9 @@ import About from './component/about';
 export default function App() {
   return (
     <>
-    <BrowserRouter>
+    <BrowserRouter basename='Ecommerce-Website'> 
        <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route exact path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="productdetail" element={<Productdetail />} />
           <Route path="category" element={<Category />} />
